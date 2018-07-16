@@ -1,0 +1,18 @@
+query userById ($id: String!, $refresh: Boolean) {
+  user: userById (id: $id, refresh: $refresh) {
+    _id
+    id
+    uuid
+    externalId
+		userName
+    contact {
+      email
+    }
+  }
+}
+
+
+{
+  "id": "userName:bbqluser",
+  "refresh": true
+}

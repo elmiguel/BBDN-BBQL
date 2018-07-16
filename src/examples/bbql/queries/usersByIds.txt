@@ -1,0 +1,21 @@
+query usersByIds ($ids: [String]!) {
+  users: usersByIds (ids: $ids) {
+    _id
+    id
+    uuid
+    externalId
+    dataSource {
+      _id
+      id
+      externalId
+      description
+    }
+  }
+}
+
+{
+  "ids": [
+    "userName:bbqluser",
+    "externalId:bbql-user2"
+  ]
+}

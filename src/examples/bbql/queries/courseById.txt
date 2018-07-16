@@ -1,0 +1,37 @@
+query courseById ($id: String!) {
+  course: courseById (id: $id) {
+    _id
+    id
+    uuid
+    externalId
+    dataSource {
+      _id
+      id
+      externalId
+      description
+    }
+    courseId
+    name
+    description
+    created
+    organization
+    ultraStatus
+    allowGuests
+    readOnly
+    termId
+    availability {
+    	available
+      duration {
+        type
+        start
+        end
+        daysOfUse
+      }
+    }
+    
+  }
+}
+
+{
+  "id": "externalId:bbql-course"
+}

@@ -1,0 +1,20 @@
+query users ($limit: Int, $offset: Int) {
+  users (limit: $limit, offset: $offset) {
+    _id
+    id
+    uuid
+    externalId
+    dataSource {
+      _id
+      id
+      externalId
+      description
+    }
+    userName
+    studentId
+    educationLevel
+    gender
+    created
+    systemRoleIds
+  }
+}
